@@ -250,6 +250,42 @@ namespace EverythingToolbar.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Compact.
+        /// </summary>
+        public static string ItemTemplateCompact {
+            get {
+                return ResourceManager.GetString("ItemTemplateCompact", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Compact (detailed).
+        /// </summary>
+        public static string ItemTemplateCompactDetailed {
+            get {
+                return ResourceManager.GetString("ItemTemplateCompactDetailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Normal.
+        /// </summary>
+        public static string ItemTemplateNormal {
+            get {
+                return ResourceManager.GetString("ItemTemplateNormal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Normal (detailed).
+        /// </summary>
+        public static string ItemTemplateNormalDetailed {
+            get {
+                return ResourceManager.GetString("ItemTemplateNormalDetailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Alt.
         /// </summary>
         public static string KeyAlt {
@@ -529,6 +565,24 @@ namespace EverythingToolbar.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to object.
+        /// </summary>
+        public static string SearchResult {
+            get {
+                return ResourceManager.GetString("SearchResult", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to objects.
+        /// </summary>
+        public static string SearchResults {
+            get {
+                return ResourceManager.GetString("SearchResults", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to About EverythingToolbar....
         /// </summary>
         public static string SettingsAbout {
@@ -552,6 +606,15 @@ namespace EverythingToolbar.Properties {
         public static string SettingsDisableAnimations {
             get {
                 return ResourceManager.GetString("SettingsDisableAnimations", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enable search history.
+        /// </summary>
+        public static string SettingsEnableHistory {
+            get {
+                return ResourceManager.GetString("SettingsEnableHistory", resourceCulture);
             }
         }
         
@@ -610,11 +673,47 @@ namespace EverythingToolbar.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Remember filter.
+        /// </summary>
+        public static string SettingsRememberFilter {
+            get {
+                return ResourceManager.GetString("SettingsRememberFilter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Replace start menu search (experimental).
+        /// </summary>
+        public static string SettingsReplaceStartMenuSearch {
+            get {
+                return ResourceManager.GetString("SettingsReplaceStartMenuSearch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Rules....
         /// </summary>
         public static string SettingsRules {
             get {
                 return ResourceManager.GetString("SettingsRules", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show quick toggles.
+        /// </summary>
+        public static string SettingsShowQuickToggles {
+            get {
+                return ResourceManager.GetString("SettingsShowQuickToggles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show results count.
+        /// </summary>
+        public static string SettingsShowResultsCount {
+            get {
+                return ResourceManager.GetString("SettingsShowResultsCount", resourceCulture);
             }
         }
         
@@ -903,6 +1002,33 @@ namespace EverythingToolbar.Properties {
         public static string SortByTypeNameDescending {
             get {
                 return ResourceManager.GetString("SortByTypeNameDescending", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dark.
+        /// </summary>
+        public static string ThemeDark {
+            get {
+                return ResourceManager.GetString("ThemeDark", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Light.
+        /// </summary>
+        public static string ThemeLight {
+            get {
+                return ResourceManager.GetString("ThemeLight", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Medium.
+        /// </summary>
+        public static string ThemeMedium {
+            get {
+                return ResourceManager.GetString("ThemeMedium", resourceCulture);
             }
         }
         

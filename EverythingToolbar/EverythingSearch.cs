@@ -51,6 +51,8 @@ namespace EverythingToolbar
         private static extern bool Everything_QueryW(bool bWait);
         [DllImport("Everything64.dll")]
         private static extern uint Everything_GetNumResults();
+        [DllImport("Everything64.dll")]
+        private static extern uint Everything_GetTotResults();
         [DllImport("Everything64.dll", CharSet = CharSet.Unicode)]
         private static extern void Everything_GetResultFullPathNameW(uint nIndex, StringBuilder lpString, uint nMaxCount);
         [DllImport("Everything64.dll")]
@@ -103,7 +105,7 @@ namespace EverythingToolbar
         {
             get
             {
-                return _currentFilter ?? FilterLoader.Instance.DefaultFilters[0];
+                return _currentFilter ?? FilterLoader.Instance.GetLastFilter();
             }
             set
             {
@@ -115,6 +117,20 @@ namespace EverythingToolbar
                     SearchResults.Clear();
                 QueryBatch();
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CurrentFilter"));
+            }
+        }
+
+        private uint _totalResultsNumber = 0;
+        public uint TotalResultsNumber
+        {
+            get
+            {
+                return _totalResultsNumber;
+            }
+            set
+            {
+                _totalResultsNumber = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("TotalResultsNumber"));
             }
         }
 
@@ -187,7 +203,10 @@ namespace EverythingToolbar
                 return;
 
             if (SearchTerm == "" && Properties.Settings.Default.isHideEmptySearchResults)
+            {
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("TotalResultsNumber"));
                 return;
+            }
 
             cancellationTokenSource = new CancellationTokenSource();
             CancellationToken cancellationToken = cancellationTokenSource.Token;
@@ -201,7 +220,13 @@ namespace EverythingToolbar
                     flags |= EVERYTHING_REQUEST_HIGHLIGHTED_PATH;
                     bool regEx = CurrentFilter.IsRegExEnabled ?? Properties.Settings.Default.isRegExEnabled;
 
-                    Everything_SetSearchW(CurrentFilter.Search + (CurrentFilter.Search.Length > 0 && !regEx ? " " : "") + SearchTerm);
+                    string search = CurrentFilter.Search + (CurrentFilter.Search.Length > 0 && !regEx ? " " : "") + SearchTerm;
+                    foreach (Filter filter in FilterLoader.Instance.DefaultUserFilters)
+                    {
+                        search = search.Replace(filter.Macro + ":", filter.Search + " ");
+                    }
+
+                    Everything_SetSearchW(search);
                     Everything_SetRequestFlags(flags);
                     Everything_SetSort((uint)Properties.Settings.Default.sortBy);
                     Everything_SetMatchCase(CurrentFilter.IsMatchCase ?? Properties.Settings.Default.isMatchCase);
@@ -219,6 +244,7 @@ namespace EverythingToolbar
                     }
 
                     uint resultsCount = Everything_GetNumResults();
+                    TotalResultsNumber = Everything_GetTotResults();
 
                     for (uint i = 0; i < resultsCount; i++)
                     {
@@ -248,7 +274,16 @@ namespace EverythingToolbar
         public void Reset()
         {
             SearchTerm = null;
-            CurrentFilter = FilterLoader.Instance.DefaultFilters[0];
+
+            if (Properties.Settings.Default.isRememberFilter)
+            {
+                Properties.Settings.Default.lastFilter = CurrentFilter.Name;
+                Properties.Settings.Default.Save();
+            }
+            else
+            {
+                CurrentFilter = FilterLoader.Instance.DefaultFilters[0];
+            }
         }
 
         public void CycleFilters(int offset = 1)

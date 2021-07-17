@@ -38,10 +38,21 @@ namespace EverythingToolbar
                 UnfocusRequested?.Invoke(this, new EventArgs());
             };
 
-            ShortcutManager.Instance.AddOrReplace("FocusSearchBox",
-                (Key)Properties.Settings.Default.shortcutKey,
-                (ModifierKeys)Properties.Settings.Default.shortcutModifiers,
-                FocusSearchBox);
+            if (!ShortcutManager.Instance.AddOrReplace("FocusSearchBox",
+                   (Key)Properties.Settings.Default.shortcutKey,
+                   (ModifierKeys)Properties.Settings.Default.shortcutModifiers,
+                   FocusSearchBox))
+            {
+                ShortcutManager.Instance.SetShortcut(Key.None, ModifierKeys.None);
+                MessageBox.Show(Properties.Resources.MessageBoxFailedToRegisterHotkey,
+                    Properties.Resources.MessageBoxErrorTitle,
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Error);
+            }
+
+            ShortcutManager.Instance.SetFocusCallback(FocusSearchBox);
+            if (Properties.Settings.Default.isReplaceStartMenuSearch)
+                ShortcutManager.Instance.HookStartMenu();
         }
 
         public void Destroy()
@@ -51,10 +62,17 @@ namespace EverythingToolbar
 
         private void OnKeyPressed(object sender, KeyEventArgs e)
         {
-            if (!SearchResultsPopup.IsOpen)
-                return;
-
-            if (e.Key == Key.Up)
+            if (Keyboard.Modifiers == ModifierKeys.Control && e.Key == Key.Up)
+            {
+                Keyboard.Focus(SearchBox);
+                EverythingSearch.Instance.SearchTerm = HistoryManager.Instance.GetPreviousItem();
+            }
+            else if (Keyboard.Modifiers == ModifierKeys.Control && e.Key == Key.Down)
+            {
+                Keyboard.Focus(SearchBox);
+                EverythingSearch.Instance.SearchTerm = HistoryManager.Instance.GetNextItem();
+            }
+            else if (e.Key == Key.Up)
             {
                 SearchResultsPopup.SearchResultsView.SelectPreviousSearchResult();
             }
@@ -93,8 +111,25 @@ namespace EverythingToolbar
             }
             else if (e.Key == Key.Escape)
             {
+                HistoryManager.Instance.AddToHistory(EverythingSearch.Instance.SearchTerm);
                 EverythingSearch.Instance.SearchTerm = null;
                 Keyboard.ClearFocus();
+            }
+            else if (e.Key == Key.PageUp)
+            {
+                SearchResultsPopup.SearchResultsView.PageUp();
+            }
+            else if (e.Key == Key.PageDown)
+            {
+                SearchResultsPopup.SearchResultsView.PageDown();
+            }
+            else if (e.Key == Key.Home)
+            {
+                SearchResultsPopup.SearchResultsView.ScrollToHome();
+            }
+            else if (e.Key == Key.End)
+            {
+                SearchResultsPopup.SearchResultsView.ScrollToEnd();
             }
         }
 

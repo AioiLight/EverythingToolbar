@@ -45,9 +45,7 @@ namespace EverythingToolbar
         {
             Dispatcher.Invoke(new Action(() =>
             {
-                Decorator listViewBorder = VisualTreeHelper.GetChild(SearchResultsListView, 0) as Decorator;
-                ScrollViewer listViewScrollViewer = listViewBorder.Child as ScrollViewer;
-                listViewScrollViewer.ScrollToVerticalOffset(verticalOffset);
+                GetScrollViewer().ScrollToVerticalOffset(verticalOffset);
             }), DispatcherPriority.ContextIdle);
         }
 
@@ -67,6 +65,38 @@ namespace EverythingToolbar
                 SearchResultsListView.SelectedIndex--;
                 SearchResultsListView.ScrollIntoView(SelectedItem);
             }
+        }
+
+        public void PageUp()
+        {
+            Dispatcher.BeginInvoke(new Action(() =>
+            {
+                GetScrollViewer().PageUp();
+            }), DispatcherPriority.ContextIdle);
+        }
+
+        public void PageDown()
+        {
+            Dispatcher.BeginInvoke(new Action(() =>
+            {
+                GetScrollViewer().PageDown();
+            }), DispatcherPriority.ContextIdle);
+        }
+
+        public void ScrollToHome()
+        {
+            Dispatcher.BeginInvoke(new Action(() =>
+            {
+                GetScrollViewer().ScrollToHome();
+            }), DispatcherPriority.ContextIdle);
+        }
+
+        public void ScrollToEnd()
+        {
+            Dispatcher.BeginInvoke(new Action(() =>
+            {
+                GetScrollViewer().ScrollToEnd();
+            }), DispatcherPriority.ContextIdle);
         }
 
         public void OpenSelectedSearchResult()
@@ -91,6 +121,12 @@ namespace EverythingToolbar
         public void PreviewSelectedFile()
         {
             SelectedItem?.PreviewInQuickLook();
+        }
+
+        private ScrollViewer GetScrollViewer()
+        {
+            Decorator listViewBorder = VisualTreeHelper.GetChild(SearchResultsListView, 0) as Decorator;
+            return listViewBorder.Child as ScrollViewer;
         }
 
         private void CopyPathToClipBoard(object sender, RoutedEventArgs e)

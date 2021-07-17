@@ -180,6 +180,18 @@
   <data name="DefaultFilterFolder" xml:space="preserve">
     <value>Folder</value>
   </data>
+  <data name="ItemTemplateCompact" xml:space="preserve">
+    <value>Compact</value>
+  </data>
+  <data name="ItemTemplateCompactDetailed" xml:space="preserve">
+    <value>Compact (detailed)</value>
+  </data>
+  <data name="ItemTemplateNormal" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="ItemTemplateNormalDetailed" xml:space="preserve">
+    <value>Normal (detailed)</value>
+  </data>
   <data name="KeyAlt" xml:space="preserve">
     <value>Alt</value>
   </data>
@@ -273,6 +285,12 @@
   <data name="SearchBoxWatermark" xml:space="preserve">
     <value>Search with Everything</value>
   </data>
+  <data name="SearchResult" xml:space="preserve">
+    <value>object</value>
+  </data>
+  <data name="SearchResults" xml:space="preserve">
+    <value>objects</value>
+  </data>
   <data name="SettingsAbout" xml:space="preserve">
     <value>About EverythingToolbar...</value>
   </data>
@@ -281,6 +299,9 @@
   </data>
   <data name="SettingsDisableAnimations" xml:space="preserve">
     <value>Disable animations</value>
+  </data>
+  <data name="SettingsEnableHistory" xml:space="preserve">
+    <value>Enable search history</value>
   </data>
   <data name="SettingsHideEmptyResults" xml:space="preserve">
     <value>Hide empty search</value>
@@ -300,8 +321,20 @@
   <data name="SettingsRegularExpressions" xml:space="preserve">
     <value>Regular Expressions</value>
   </data>
+  <data name="SettingsRememberFilter" xml:space="preserve">
+    <value>Remember filter</value>
+  </data>
+  <data name="SettingsReplaceStartMenuSearch" xml:space="preserve">
+    <value>Replace start menu search (experimental)</value>
+  </data>
   <data name="SettingsRules" xml:space="preserve">
     <value>Rules...</value>
+  </data>
+  <data name="SettingsShowQuickToggles" xml:space="preserve">
+    <value>Show quick toggles</value>
+  </data>
+  <data name="SettingsShowResultsCount" xml:space="preserve">
+    <value>Show results count</value>
   </data>
   <data name="SettingsSortBy" xml:space="preserve">
     <value>Sort By</value>
@@ -398,6 +431,15 @@
   </data>
   <data name="SortByTypeNameDescending" xml:space="preserve">
     <value>Type name descending</value>
+  </data>
+  <data name="ThemeDark" xml:space="preserve">
+    <value>Dark</value>
+  </data>
+  <data name="ThemeLight" xml:space="preserve">
+    <value>Light</value>
+  </data>
+  <data name="ThemeMedium" xml:space="preserve">
+    <value>Medium</value>
   </data>
   <data name="UserFilterAudio" xml:space="preserve">
     <value>Audio</value>

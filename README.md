@@ -2,6 +2,7 @@ EverythingToolbar
 =================
 
 [![build](https://github.com/stnkl/EverythingToolbar/workflows/build/badge.svg)](https://github.com/stnkl/EverythingToolbar/actions)
+[![Crowdin](https://badges.crowdin.net/everythingtoolbar/localized.svg)](https://crowdin.com/project/everythingtoolbar)
 [![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/stnkl/EverythingToolbar/blob/master/LICENSE)
 [![Downloads](https://img.shields.io/github/downloads/stnkl/EverythingToolbar/total?color=blue)](https://github.com/stnkl/EverythingToolbar/releases/latest)
 
@@ -32,7 +33,10 @@ Requirements
 Install
 -------
 - Make sure [Everything](https://www.voidtools.com) is installed and running
-- Download [EverythingToolbar](https://github.com/stnkl/EverythingToolbar/releases) and install it
+- Install EverythingToolbar using one of the following methods
+  - Download the [EverythingToolbar](https://github.com/stnkl/EverythingToolbar/releases) installer
+  - [Chocolatey](https://chocolatey.org/): `choco install everythingtoolbar`
+  - [winget](https://github.com/microsoft/winget-cli/): `winget install everythingtoolbar`
 - Enable EverythingToolbar via the context menu of the taskbar
   - *Note: You will have to open the context menu twice as it doesn't show up the first time you open it.*
 - Adjust size and position after unlocking the taskbar ([demonstration video](https://user-images.githubusercontent.com/17520641/107118574-19a1bf80-6882-11eb-843a-7e854e5d0684.gif))
@@ -48,18 +52,19 @@ Build
 Keyboard shortcuts
 ------------------
 
-| Shortcut                                            | Function                         |
-|-----------------------------------------------------|----------------------------------|
-| <kbd>&#8593;</kbd> <kbd>&#8595;</kbd>               | Navigate search results          |
-| <kbd>Return</kbd>                                   | Open                             |
-| <kbd>Ctrl</kbd>+<kbd>Return</kbd>/<kbd>Click</kbd>  | Open path                        |
-| <kbd>Shift</kbd>+<kbd>Return</kbd>/<kbd>Click</kbd> | Open in Everything               |
-| <kbd>Alt</kbd>+<kbd>Return</kbd>/<kbd>Click</kbd>   | File properties                  |
-| <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Enter</kbd>   | Run as admin                     |
-| (<kbd>Shift</kbd>+)<kbd>Tab</kbd>                   | Cycle through filters            |
-| <kbd>Ctrl</kbd>+<kbd>0-9</kbd>                      | Select filter                    |
-| <kbd>Ctrl</kbd>+<kbd>Space</kbd>                    | Preview file in [QuickLook](https://github.com/QL-Win/QuickLook) |
-| <kbd>Win</kbd>+<kbd>Alt</kbd>+<kbd>S</kbd>          | Focus search box (customizable)  |
+| Shortcut                                              | Function                             |
+|-------------------------------------------------------|--------------------------------------|
+| <kbd>&#8593;</kbd>/<kbd>&#8595;</kbd>                 | Navigate search results              |
+| <kbd>Ctrl</kbd>+<kbd>&#8593;</kbd>/<kbd>&#8595;</kbd> | Navigate search history (if enabled) |
+| <kbd>Return</kbd>                                     | Open                                 |
+| <kbd>Ctrl</kbd>+<kbd>Return</kbd>/<kbd>Click</kbd>    | Open path                            |
+| <kbd>Shift</kbd>+<kbd>Return</kbd>/<kbd>Click</kbd>   | Open in Everything                   |
+| <kbd>Alt</kbd>+<kbd>Return</kbd>/<kbd>Click</kbd>     | File properties                      |
+| <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Enter</kbd>     | Run as admin                         |
+| (<kbd>Shift</kbd>+)<kbd>Tab</kbd>                     | Cycle through filters                |
+| <kbd>Ctrl</kbd>+<kbd>0-9</kbd>                        | Select filter                        |
+| <kbd>Ctrl</kbd>+<kbd>Space</kbd>                      | Preview file in [QuickLook](https://github.com/QL-Win/QuickLook) |
+| <kbd>Win</kbd>+<kbd>Alt</kbd>+<kbd>S</kbd>            | Focus search box (customizable)      |
 
 Rules
 -----
@@ -87,6 +92,6 @@ Customization
 Contribute
 ----------
 
-Helping out with open issues, especially those marked as "help wanted", is appreciated!
+All kinds of contributions (questions, bug reports, pull requests) are welcome! Helping out with open issues is very much appreciated. As a basic rule, before filing issues, feature requests or anything else, take a look at the issues and check if it has already been reported by another user. If so, engage in the already existing discussion.
 
-You can also help by translating EverythingToolbar. To do so download and translate the [resources](https://github.com/stnkl/EverythingToolbar/blob/master/EverythingToolbar/Properties/Resources.resx) file and either attach it to [this issue](https://github.com/stnkl/EverythingToolbar/issues/64) or open a pull request.
+You can also help by [translating EverythingToolbar](https://crowdin.com/project/everythingtoolbar).

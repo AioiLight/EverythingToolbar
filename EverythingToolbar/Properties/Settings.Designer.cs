@@ -12,7 +12,7 @@ namespace EverythingToolbar.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.6.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.10.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -109,7 +109,7 @@ namespace EverythingToolbar.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Medium")]
+        [global::System.Configuration.DefaultSettingValueAttribute("MEDIUM")]
         public string theme {
             get {
                 return ((string)(this["theme"]));
@@ -121,7 +121,7 @@ namespace EverythingToolbar.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Normal")]
+        [global::System.Configuration.DefaultSettingValueAttribute("NORMAL")]
         public string itemTemplate {
             get {
                 return ((string)(this["itemTemplate"]));
@@ -224,6 +224,90 @@ namespace EverythingToolbar.Properties {
             }
             set {
                 this["isHideEmptySearchResults"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool isShowResultsCount {
+            get {
+                return ((bool)(this["isShowResultsCount"]));
+            }
+            set {
+                this["isShowResultsCount"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool isShowQuickToggles {
+            get {
+                return ((bool)(this["isShowQuickToggles"]));
+            }
+            set {
+                this["isShowQuickToggles"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool isEnableHistory {
+            get {
+                return ((bool)(this["isEnableHistory"]));
+            }
+            set {
+                this["isEnableHistory"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool isUpgradeRequired {
+            get {
+                return ((bool)(this["isUpgradeRequired"]));
+            }
+            set {
+                this["isUpgradeRequired"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool isReplaceStartMenuSearch {
+            get {
+                return ((bool)(this["isReplaceStartMenuSearch"]));
+            }
+            set {
+                this["isReplaceStartMenuSearch"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool isRememberFilter {
+            get {
+                return ((bool)(this["isRememberFilter"]));
+            }
+            set {
+                this["isRememberFilter"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string lastFilter {
+            get {
+                return ((string)(this["lastFilter"]));
+            }
+            set {
+                this["lastFilter"] = value;
             }
         }
     }

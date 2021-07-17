@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-  <!--
-    Microsoft ResX Schema
-
+  <!-- 
+    Microsoft ResX Schema 
+    
     Version 2.0
-
-    The primary goals of this format is to allow a simple XML format
-    that is mostly human readable. The generation and parsing of the
-    various data types are done through the TypeConverter classes
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
     associated with the data types.
-
+    
     Example:
-
+    
     ... ado.net/XML headers & schema ...
     <resheader name="resmimetype">text/microsoft-resx</resheader>
     <resheader name="version">2.0</resheader>
@@ -26,79 +26,79 @@
         <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
         <comment>This is a comment</comment>
     </data>
-
-    There are any number of "resheader" rows that contain simple
+                
+    There are any number of "resheader" rows that contain simple 
     name/value pairs.
-
-    Each data row contains a name, and value. The row also contains a
-    type or mimetype. Type corresponds to a .NET class that support
-    text/value conversion through the TypeConverter architecture.
-    Classes that don't support this are serialized and stored with the
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
     mimetype set.
-
-    The mimetype is used for serialized objects, and tells the
-    ResXResourceReader how to depersist the object. This is currently not
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
     extensible. For a given mimetype the value must be set accordingly:
-
-    Note - application/x-microsoft.net.object.binary.base64 is the format
-    that the ResXResourceWriter will generate, however the reader can
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
     read any of the formats listed below.
-
+    
     mimetype: application/x-microsoft.net.object.binary.base64
-    value   : The object must be serialized with
+    value   : The object must be serialized with 
             : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
-
+    
     mimetype: application/x-microsoft.net.object.soap.base64
-    value   : The object must be serialized with
+    value   : The object must be serialized with 
             : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
             : and then encoded with base64 encoding.
 
     mimetype: application/x-microsoft.net.object.bytearray.base64
-    value   : The object must be serialized into a byte array
+    value   : The object must be serialized into a byte array 
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
           <xsd:element name="metadata">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
               </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string" />
-              <xsd:attribute name="type" type="xsd:string" />
-              <xsd:attribute name="mimetype" type="xsd:string" />
-              <xsd:attribute ref="xml:space" />
+              <xsd:attribute name="name" use="required" type="xsd:string"/>
+              <xsd:attribute name="type" type="xsd:string"/>
+              <xsd:attribute name="mimetype" type="xsd:string"/>
+              <xsd:attribute ref="xml:space"/>
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
             <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string" />
-              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="alias" type="xsd:string"/>
+              <xsd:attribute name="name" type="xsd:string"/>
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="data">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-              <xsd:attribute ref="xml:space" />
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+              <xsd:attribute ref="xml:space"/>
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" />
+              <xsd:attribute name="name" type="xsd:string" use="required"/>
             </xsd:complexType>
           </xsd:element>
         </xsd:choice>
@@ -179,6 +179,30 @@
   </data>
   <data name="DefaultFilterFolder" xml:space="preserve">
     <value>Ordner</value>
+  </data>
+  <data name="ItemTemplateCompact" xml:space="preserve">
+    <value>Kompakt</value>
+  </data>
+  <data name="ItemTemplateCompactDetailed" xml:space="preserve">
+    <value>Kompakt (detailliert)</value>
+  </data>
+  <data name="ItemTemplateNormal" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="ItemTemplateNormalDetailed" xml:space="preserve">
+    <value>Normal (detailliert)</value>
+  </data>
+  <data name="KeyAlt" xml:space="preserve">
+    <value>Alt</value>
+  </data>
+  <data name="KeyCtrl" xml:space="preserve">
+    <value>Strg</value>
+  </data>
+  <data name="KeyShift" xml:space="preserve">
+    <value>Shift</value>
+  </data>
+  <data name="KeyWin" xml:space="preserve">
+    <value>Win</value>
   </data>
   <data name="MessageBoxCopyException" xml:space="preserve">
     <value>Möchten Sie den Ausnahmentext in die Zwischenablage kopieren?</value>
@@ -261,6 +285,12 @@
   <data name="SearchBoxWatermark" xml:space="preserve">
     <value>Suchen mit Everything</value>
   </data>
+  <data name="SearchResult" xml:space="preserve">
+    <value>Eintrag</value>
+  </data>
+  <data name="SearchResults" xml:space="preserve">
+    <value>Einträge</value>
+  </data>
   <data name="SettingsAbout" xml:space="preserve">
     <value>Über EverythingToolbar...</value>
   </data>
@@ -269,6 +299,9 @@
   </data>
   <data name="SettingsDisableAnimations" xml:space="preserve">
     <value>Animationen deaktivieren</value>
+  </data>
+  <data name="SettingsEnableHistory" xml:space="preserve">
+    <value>Suchverlauf aktivieren</value>
   </data>
   <data name="SettingsHideEmptyResults" xml:space="preserve">
     <value>Leere Suche ausblenden</value>
@@ -288,8 +321,20 @@
   <data name="SettingsRegularExpressions" xml:space="preserve">
     <value>RegEx aktivieren</value>
   </data>
+  <data name="SettingsRememberFilter" xml:space="preserve">
+    <value>Filtereinstellung merken</value>
+  </data>
+  <data name="SettingsReplaceStartMenuSearch" xml:space="preserve">
+    <value>Startmenüsuche ersetzen (experimentell)</value>
+  </data>
   <data name="SettingsRules" xml:space="preserve">
     <value>Regeln...</value>
+  </data>
+  <data name="SettingsShowQuickToggles" xml:space="preserve">
+    <value>Suchoptionen anzeigen</value>
+  </data>
+  <data name="SettingsShowResultsCount" xml:space="preserve">
+    <value>Ergebnisanzahl anzeigen</value>
   </data>
   <data name="SettingsSortBy" xml:space="preserve">
     <value>Sortieren nach</value>
@@ -387,6 +432,15 @@
   <data name="SortByTypeNameDescending" xml:space="preserve">
     <value>Typ absteigend</value>
   </data>
+  <data name="ThemeDark" xml:space="preserve">
+    <value>Dunkel</value>
+  </data>
+  <data name="ThemeLight" xml:space="preserve">
+    <value>Hell</value>
+  </data>
+  <data name="ThemeMedium" xml:space="preserve">
+    <value>Normal</value>
+  </data>
   <data name="UserFilterAudio" xml:space="preserve">
     <value>Audio</value>
   </data>
@@ -407,17 +461,5 @@
   </data>
   <data name="UserFilterVideo" xml:space="preserve">
     <value>Videos</value>
-  </data>
-  <data name="KeyAlt" xml:space="preserve">
-    <value>Alt</value>
-  </data>
-  <data name="KeyCtrl" xml:space="preserve">
-    <value>Strg</value>
-  </data>
-  <data name="KeyShift" xml:space="preserve">
-    <value>Shift</value>
-  </data>
-  <data name="KeyWin" xml:space="preserve">
-    <value>Win</value>
   </data>
 </root>
